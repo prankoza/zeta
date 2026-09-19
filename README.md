@@ -21,3 +21,7 @@ cat stage1.bin stage2.bin kernel.bin > zeta.img
 
 ## Run
 qemu-system-x86_64 -drive format=raw,file=zeta.img
+
+---
+
+Made by [prankoza](https://github.com/prankoza)
