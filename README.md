@@ -11,16 +11,19 @@ A custom operating system kernel and bootloader written in C and assembly.
 
 ## Build
 
-bash
-nasm -f bin stage1.asm -o stage1.bin
-nasm -f bin stage2.asm -o stage2.bin
-nasm -f elf32 kernel_entry.asm -o kernel_entry.o
-gcc -m32 -ffreestanding -nostdlib -c kernel.c -o kernel.o
-ld -m elf_i386 -T linker.ld -o kernel.bin kernel_entry.o kernel.o
-cat stage1.bin stage2.bin kernel.bin > zeta.img
+```bash
+-- nasm -f bin stage1.asm -o stage1.bin
+-- nasm -f bin stage2.asm -o stage2.bin
+-- nasm -f elf32 kernel_entry.asm -o kernel_entry.o
+-- gcc -m32 -ffreestanding -nostdlib -c kernel.c -o kernel.o
+-- ld -m elf_i386 -T linker.ld -o kernel.bin kernel_entry.o kernel.o
+-- cat stage1.bin stage2.bin kernel.bin > zeta.img
+```
 
 ## Run
+```bash
 qemu-system-x86_64 -drive format=raw,file=zeta.img
+```
 
 ---
 
