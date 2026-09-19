@@ -25,5 +25,3 @@ qemu-system-x86_64 -drive format=raw,file=zeta.img
 ---
 
 Made by [prankoza](https://github.com/prankoza)
-
-![Build](https://img.shields.io/badge/build-passing-brightgreen)
