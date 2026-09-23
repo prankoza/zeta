@@ -54,3 +54,6 @@ dd if=/dev/zero bs=512 count=20 >> zeta.img
 ```bash
 qemu-system-x86_64 -drive format=raw,file=zeta.img
 ```
+---
+
+Made by [prankoza](https://github.com/prankoza)
